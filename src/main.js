@@ -270,6 +270,24 @@ class CardGameScene extends GameScene {
 	}
 
 	//==============================================================================
+	// 이후 출력. (개발자 도구 패널)
+	// 엔진 0.3.13~0.3.14 의 GameScene.postDraw 는 개발자 도구를 껐을 때(useDevTools = false)도
+	// 패널을 그리려다 null 을 만나 매 프레임 예외를 낸다. 꺼져 있으면 부르지 않는다.
+	//==============================================================================
+	/**
+	 * @override
+	 * @param { Graphic } graphic
+	 */
+	postDraw(graphic) {
+		const engine = this.getEngine();
+		const engineConfiguration = engine.getEngineConfiguration();
+		if (engineConfiguration.useDevTools === false) {
+			return;
+		}
+		super.postDraw(graphic);
+	}
+
+	//==============================================================================
 	// 화면 전환.
 	//==============================================================================
 	/**

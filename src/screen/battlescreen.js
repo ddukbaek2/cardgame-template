@@ -42,9 +42,11 @@ const PLAYER_COUNT = 2;
 //==============================================================================
 const TOP_BAR_OFFSET = 46;
 const OPPONENT_PLATE_OFFSET = 112;
-const OPPONENT_HAND_OFFSET = 240;
-const PLAYER_HAND_OFFSET = 300;
-const HINT_OFFSET = 162;
+const OPPONENT_HAND_OFFSET = 252;
+const PLAYER_HAND_OFFSET = 324;
+const HINT_OFFSET = 164;
+const HINT_WIDTH = 640;
+const HINT_HEIGHT = 42;
 const TIMER_OFFSET = 132;
 const ACTION_BUTTON_OFFSET = 66;
 const PLAYER_PLATE_GAP = 70;
@@ -132,6 +134,8 @@ export class BattleScreen extends BaseScreen {
 		const timerBackColor = Color.createFromHEX(Colors.dim);
 		timerBackColor.alpha = 0.55;
 		const timerFillColor = Color.createFromHEX(Colors.timer);
+		const hintColor = Color.createFromHEX(Colors.dim);
+		hintColor.alpha = 0.6;
 
 		// 덱. (뒷면 세 장을 살짝 어긋나게 쌓는다)
 		this.#deckNode = NodeLayout.create(WorldNode)
@@ -267,13 +271,25 @@ export class BattleScreen extends BaseScreen {
 
 		this.#hintNode = NodeLayout.create(WorldNode)
 			.name("hint")
+			.active(false)
 			.pivot(Pivot.middleCenter)
-			.contentSize(REFERENCE_RESOLUTION_WIDTH, 40)
-			.component(Text, (text) => {
-				text.setFont(bodyFont);
-				text.setFontSize(FontSize.small);
-				text.setTextColor(Colors.textLight);
+			.contentSize(HINT_WIDTH, HINT_HEIGHT)
+			.component(Paint, (paint) => {
+				paint.setColor(hintColor);
+				paint.setRoundSize(HINT_HEIGHT * 0.5);
 			})
+			.children(
+				NodeLayout.create(WorldNode)
+					.name("hintLabel")
+					.pivot(Pivot.middleCenter)
+					.contentSize(HINT_WIDTH, HINT_HEIGHT)
+					.localPosition(HINT_WIDTH * 0.5, HINT_HEIGHT * 0.5)
+					.component(Text, (text) => {
+						text.setFont(bodyFont);
+						text.setFontSize(FontSize.small);
+						text.setTextColor(Colors.textLight);
+					}),
+			)
 			.build(stageNode);
 
 		this.#timerNode = NodeLayout.create(WorldNode)
@@ -852,7 +868,9 @@ export class BattleScreen extends BaseScreen {
 	 */
 	setHint(hint) {
 		const hintNode = this.getHintNode();
-		const hintText = hintNode.getComponent(Text);
+		hintNode.setActive(hint !== "");
+		const hintLabelNode = hintNode.findChildByName("hintLabel");
+		const hintText = hintLabelNode.getComponent(Text);
 		hintText.setText(hint);
 	}
 

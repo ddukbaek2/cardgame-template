@@ -215,7 +215,9 @@ export class TitleScreen extends BaseScreen {
 				text.setFont(bodyFont);
 				text.setFontSize(FontSize.body);
 				text.setText(GAME_SUBTITLE);
-				text.setTextColor(Colors.textMuted);
+				text.setTextColor(Colors.textLight);
+				text.setStrokeColor(Colors.textDark);
+				text.setStrokeWidth(5);
 			})
 			.build(stageNode);
 
