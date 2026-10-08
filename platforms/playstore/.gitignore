@@ -1,0 +1,10 @@
+node_modules/
+www/
+
+# 네이티브 스캐폴드. (첫 빌드 때 'npx cap add android' 로 만들고 tools/prepareandroid.cjs 가 매번 패치한다)
+android/
+
+# 서명 파일. (업로드 키 — 절대 커밋하지 않는다)
+*.keystore
+*.jks
+keystore.properties

@@ -1,0 +1,24 @@
+# 빌드 산출물.
+build/
+
+# 의존성.
+node_modules/
+
+# 서명 파일. (플랫폼별 산출물은 각 platforms/*/.gitignore 가 맡는다)
+*.keystore
+*.jks
+keystore.properties
+
+# 환경 변수. (제미나이 API 키 등 — 커밋 금지)
+.env
+.env.*
+!.env.example
+
+# 로그.
+npm-debug.log*
+
+# macOS 파인더 메타데이터.
+.DS_Store
+
+# 그림 생성 원본. (tools/generate-artwork.cjs — 다시 줄일 때 쓰는 1024px 원본)
+tools/.artwork-raw/

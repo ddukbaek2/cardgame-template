@@ -1,0 +1,14 @@
+{
+	"playstore": {
+		"appId": "com.ddukbaek2.cardgame.template",
+		"appName": "Card Game Template",
+		"versionCode": 1,
+		"versionName": "0.1.0"
+	},
+	"appstore": {
+		"appId": "com.ddukbaek2.cardgame.template",
+		"appName": "Card Game Template",
+		"versionName": "0.1.0",
+		"buildNumber": 1
+	}
+}

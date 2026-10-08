@@ -1,0 +1,9 @@
+{
+	"appId": "<appId>",
+	"appName": "<appName>",
+	"webDir": "www",
+	"ios": {
+		"backgroundColor": "#05060f",
+		"contentInset": "never"
+	}
+}

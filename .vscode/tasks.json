@@ -1,0 +1,57 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Packaging Web",
+			"type": "shell",
+			"command": "npm run build",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"problemMatcher": []
+		},
+		{
+			"label": "Deploy NAS Dev",
+			"type": "shell",
+			"command": "npm run build && npm run deploy:dev",
+			"group": "none",
+			"problemMatcher": []
+		},
+		{
+			"label": "Deploy NAS Test",
+			"type": "shell",
+			"command": "npm run build && npm run deploy:test",
+			"group": "none",
+			"problemMatcher": []
+		},
+		{
+			"label": "Packaging Playstore AAB",
+			"type": "shell",
+			"command": "npm run build && npm run build:aab:playstore",
+			"group": "build",
+			"problemMatcher": []
+		},
+		{
+			"label": "Packaging Playstore APK",
+			"type": "shell",
+			"command": "npm run build && npm run build:apk:playstore",
+			"group": "build",
+			"problemMatcher": []
+		},
+		{
+			"label": "Sync Appstore",
+			"type": "shell",
+			"command": "npm run build && npm run sync:appstore",
+			"group": "build",
+			"problemMatcher": []
+		},
+		{
+			"label": "Generate Artwork",
+			"type": "shell",
+			"command": "npm run artwork",
+			"group": "none",
+			"problemMatcher": []
+		}
+	]
+}

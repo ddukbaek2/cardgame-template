@@ -1,0 +1,35 @@
+{
+	"name": "cardgame-template",
+	"version": "0.1.0",
+	"description": "vanilla.js 기반 모바일 세로형 카드 대전 게임 템플릿",
+	"main": "src/main.js",
+	"scripts": {
+		"postinstall": "git submodule update --init --recursive",
+		"install:platforms": "npm install --prefix platforms/playstore && npm install --prefix platforms/appstore",
+		"build": "node libs/vanilla.js/tools/project.cjs build --script src/main.js --input . --output build/web --template webtemplate && node tools/cachebust.cjs",
+		"check": "node libs/vanilla.js/tools/project.cjs check --input .",
+		"artwork": "node tools/generate-artwork.cjs",
+		"deploy:dev": "node tools/deploy.cjs dev",
+		"deploy:test": "node tools/deploy.cjs test",
+		"stage:playstore": "node tools/manifest.cjs playstore platforms/playstore/capacitor.config.json -- npm run stage --prefix platforms/playstore",
+		"sync:playstore": "node tools/manifest.cjs playstore platforms/playstore/capacitor.config.json -- npm run sync --prefix platforms/playstore",
+		"open:playstore": "node tools/manifest.cjs playstore platforms/playstore/capacitor.config.json -- npm run open --prefix platforms/playstore",
+		"build:aab:playstore": "node tools/manifest.cjs playstore platforms/playstore/capacitor.config.json -- npm run build:aab --prefix platforms/playstore",
+		"build:apk:playstore": "node tools/manifest.cjs playstore platforms/playstore/capacitor.config.json -- npm run build:apk --prefix platforms/playstore",
+		"stage:appstore": "node tools/manifest.cjs appstore platforms/appstore/capacitor.config.json -- npm run stage --prefix platforms/appstore",
+		"sync:appstore": "node tools/manifest.cjs appstore platforms/appstore/capacitor.config.json -- npm run sync --prefix platforms/appstore",
+		"open:appstore": "node tools/manifest.cjs appstore platforms/appstore/capacitor.config.json -- npm run open --prefix platforms/appstore"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/ddukbaek2/cardgame-template.git"
+	},
+	"keywords": [],
+	"author": "ddukbaek2",
+	"license": "MIT",
+	"type": "commonjs",
+	"devDependencies": {
+		"esbuild": "^0.24.0",
+		"sharp": "^0.34.4"
+	}
+}

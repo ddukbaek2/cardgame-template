@@ -1,0 +1,21 @@
+{
+	"name": "cardgame-template-playstore",
+	"private": true,
+	"version": "0.0.0",
+	"scripts": {
+		"validate": "node tools/validate.cjs",
+		"stage": "npm run validate && node ../../libs/vanilla.js/tools/project.cjs stage --source ../../build/web --destination www",
+		"sync": "npm run validate && node tools/prepareandroid.cjs",
+		"open": "cap open android",
+		"build:aab": "npm run validate && node tools/buildaab.cjs",
+		"build:apk": "npm run validate && node tools/buildapk.cjs"
+	},
+	"devDependencies": {
+		"@capacitor/cli": "^6.1.2"
+	},
+	"dependencies": {
+		"@capacitor/android": "^6.1.2",
+		"@capacitor/app": "^6.0.3",
+		"@capacitor/core": "^6.1.2"
+	}
+}

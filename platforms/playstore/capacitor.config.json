@@ -1,0 +1,12 @@
+{
+	"appId": "<appId>",
+	"appName": "<appName>",
+	"webDir": "www",
+	"android": {
+		"allowMixedContent": false,
+		"backgroundColor": "#05060f"
+	},
+	"server": {
+		"androidScheme": "https"
+	}
+}

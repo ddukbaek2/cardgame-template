@@ -1,0 +1,5 @@
+node_modules/
+www/
+
+# 네이티브 스캐폴드. (macOS 에서 첫 sync 때 'npx cap add ios' 로 만들고 tools/sync.cjs 가 매번 패치한다)
+ios/

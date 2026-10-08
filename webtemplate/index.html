@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<meta name="theme-color" content="#05060f">
+		<title>Card Game Template</title>
+		<link rel="icon" href="./favicon.ico">
+		<link rel="icon" href="./favicon.svg" type="image/svg+xml">
+		<!-- 스타일은 인라인으로 포함한다. 별도 css 요청이 늦게 도착하면 적용 전까지
+		     캔버스가 원본 픽셀 크기로 크게 표시되어 첫 화면이 커졌다 줄어드는 문제가 생긴다. -->
+		<style>
+			html, body {
+				margin: 0;
+				padding: 0;
+				width: 100%;
+				height: 100%;
+				overflow: hidden;
+				background: #05060f;
+				touch-action: none;
+			}
+
+			body {
+				position: fixed;
+				inset: 0;
+			}
+
+			canvas {
+				display: block;
+				width: 100vw;
+				/* iOS 사파리에서 100vh 는 주소창이 접힌 상태의 높이라 하단 UI가 잘린다.
+				   dvh(동적 뷰포트 높이)는 실제 보이는 영역과 일치한다. (미지원 브라우저는 100vh 폴백) */
+				height: 100vh;
+				height: 100dvh;
+			}
+		</style>
+		<script type="module" src="./js/bundle.min.js"></script>
+	</head>
+	<body>
+	</body>
+</html>

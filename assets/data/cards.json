@@ -1,0 +1,182 @@
+{
+	"kinds": [
+		{
+			"key": "sun",
+			"name": "해",
+			"frameTop": "#ffd27a",
+			"frameBottom": "#b8580f",
+			"frameBorder": "#4a1f03",
+			"accent": "#fff4c9"
+		},
+		{
+			"key": "moon",
+			"name": "달",
+			"frameTop": "#aec6ff",
+			"frameBottom": "#3b3fa6",
+			"frameBorder": "#121640",
+			"accent": "#e9f0ff"
+		}
+	],
+	"cards": [
+		{
+			"id": "sun1",
+			"kind": "sun",
+			"value": 1,
+			"name": "해 1",
+			"description": "예제 카드입니다. 적힌 숫자가 그대로 힘이 됩니다.",
+			"art": ""
+		},
+		{
+			"id": "sun2",
+			"kind": "sun",
+			"value": 2,
+			"name": "해 2",
+			"description": "예제 카드입니다. 적힌 숫자가 그대로 힘이 됩니다.",
+			"art": ""
+		},
+		{
+			"id": "sun3",
+			"kind": "sun",
+			"value": 3,
+			"name": "해 3",
+			"description": "예제 카드입니다. 적힌 숫자가 그대로 힘이 됩니다.",
+			"art": ""
+		},
+		{
+			"id": "sun4",
+			"kind": "sun",
+			"value": 4,
+			"name": "해 4",
+			"description": "예제 카드입니다. 적힌 숫자가 그대로 힘이 됩니다.",
+			"art": ""
+		},
+		{
+			"id": "sun5",
+			"kind": "sun",
+			"value": 5,
+			"name": "해 5",
+			"description": "예제 카드입니다. 적힌 숫자가 그대로 힘이 됩니다.",
+			"art": ""
+		},
+		{
+			"id": "sun6",
+			"kind": "sun",
+			"value": 6,
+			"name": "해 6",
+			"description": "예제 카드입니다. 적힌 숫자가 그대로 힘이 됩니다.",
+			"art": ""
+		},
+		{
+			"id": "sun7",
+			"kind": "sun",
+			"value": 7,
+			"name": "해 7",
+			"description": "예제 카드입니다. 적힌 숫자가 그대로 힘이 됩니다.",
+			"art": ""
+		},
+		{
+			"id": "sun8",
+			"kind": "sun",
+			"value": 8,
+			"name": "해 8",
+			"description": "예제 카드입니다. 적힌 숫자가 그대로 힘이 됩니다.",
+			"art": ""
+		},
+		{
+			"id": "sun9",
+			"kind": "sun",
+			"value": 9,
+			"name": "해 9",
+			"description": "예제 카드입니다. 적힌 숫자가 그대로 힘이 됩니다.",
+			"art": ""
+		},
+		{
+			"id": "sun10",
+			"kind": "sun",
+			"value": 10,
+			"name": "해 10",
+			"description": "예제 카드입니다. 적힌 숫자가 그대로 힘이 됩니다.",
+			"art": ""
+		},
+		{
+			"id": "moon1",
+			"kind": "moon",
+			"value": 1,
+			"name": "달 1",
+			"description": "예제 카드입니다. 적힌 숫자가 그대로 힘이 됩니다.",
+			"art": ""
+		},
+		{
+			"id": "moon2",
+			"kind": "moon",
+			"value": 2,
+			"name": "달 2",
+			"description": "예제 카드입니다. 적힌 숫자가 그대로 힘이 됩니다.",
+			"art": ""
+		},
+		{
+			"id": "moon3",
+			"kind": "moon",
+			"value": 3,
+			"name": "달 3",
+			"description": "예제 카드입니다. 적힌 숫자가 그대로 힘이 됩니다.",
+			"art": ""
+		},
+		{
+			"id": "moon4",
+			"kind": "moon",
+			"value": 4,
+			"name": "달 4",
+			"description": "예제 카드입니다. 적힌 숫자가 그대로 힘이 됩니다.",
+			"art": ""
+		},
+		{
+			"id": "moon5",
+			"kind": "moon",
+			"value": 5,
+			"name": "달 5",
+			"description": "예제 카드입니다. 적힌 숫자가 그대로 힘이 됩니다.",
+			"art": ""
+		},
+		{
+			"id": "moon6",
+			"kind": "moon",
+			"value": 6,
+			"name": "달 6",
+			"description": "예제 카드입니다. 적힌 숫자가 그대로 힘이 됩니다.",
+			"art": ""
+		},
+		{
+			"id": "moon7",
+			"kind": "moon",
+			"value": 7,
+			"name": "달 7",
+			"description": "예제 카드입니다. 적힌 숫자가 그대로 힘이 됩니다.",
+			"art": ""
+		},
+		{
+			"id": "moon8",
+			"kind": "moon",
+			"value": 8,
+			"name": "달 8",
+			"description": "예제 카드입니다. 적힌 숫자가 그대로 힘이 됩니다.",
+			"art": ""
+		},
+		{
+			"id": "moon9",
+			"kind": "moon",
+			"value": 9,
+			"name": "달 9",
+			"description": "예제 카드입니다. 적힌 숫자가 그대로 힘이 됩니다.",
+			"art": ""
+		},
+		{
+			"id": "moon10",
+			"kind": "moon",
+			"value": 10,
+			"name": "달 10",
+			"description": "예제 카드입니다. 적힌 숫자가 그대로 힘이 됩니다.",
+			"art": ""
+		}
+	]
+}
