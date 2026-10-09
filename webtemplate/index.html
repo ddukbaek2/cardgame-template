@@ -32,6 +32,11 @@
 				   dvh(동적 뷰포트 높이)는 실제 보이는 영역과 일치한다. (미지원 브라우저는 100vh 폴백) */
 				height: 100vh;
 				height: 100dvh;
+				/* 세로 전용 게임이라 가로가 세로보다 길면(1:1 을 넘으면) 가로를 세로 길이까지만 쓰고 가운데에 둔다. (양옆은 바탕색 레터박스)
+				   엔진이 캔버스에 넣는 인라인 width 보다 max-width 가 앞서고, 엔진은 캔버스 크기와 위치로 뷰와 입력 좌표를 잡는다. */
+				max-width: 100vh;
+				max-width: 100dvh;
+				margin: 0 auto;
 			}
 		</style>
 		<script type="module" src="./js/bundle.min.js"></script>
