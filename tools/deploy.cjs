@@ -9,6 +9,8 @@
 //   <프로젝트> = package.json 의 name.
 //   live 는 앱스토어·플레이스토어 빌드용 브랜치라 웹 배포 대상이 아니다.
 //
+// 기획서(docs/design.html)가 있으면 배포 루트의 design.html 로 함께 싣는다. (웹 배포 전용 — 스토어 빌드에는 싣지 않는다)
+//
 // 미러링은 바뀐 파일만 교체한다. 배포 폴더를 통째로 비운 뒤 다시 복사하면
 // SMB 삭제 중 서버측 잠금으로 폴더가 접근 불가가 된 사고가 있었다. (파이프매니아, 2026-07-27)
 //
@@ -49,6 +51,15 @@ function main() {
 	const versionText = JSON.stringify({ hash: commitHash, date: commitDate });
 	fileSystem.writeFileSync(path.join(buildDirectory, "version.json"), versionText + "\n", "utf8");
 	console.log(`[deploy] version.json ${versionText}`);
+
+	// 기획서. (그림을 ../assets/ 로 부르므로 루트에서 열리도록 assets/ 로 고쳐 싣는다)
+	const designPath = path.join(projectRoot, "docs", "design.html");
+	if (fileSystem.existsSync(designPath)) {
+		const designText = fileSystem.readFileSync(designPath, "utf8");
+		const rootDesignText = designText.split("\"../assets/").join("\"assets/");
+		fileSystem.writeFileSync(path.join(buildDirectory, "design.html"), rootDesignText, "utf8");
+		console.log("[deploy] design.html (기획서)");
+	}
 
 	const packageText = fileSystem.readFileSync(path.join(projectRoot, "package.json"), "utf8");
 	const projectName = JSON.parse(packageText).name;
